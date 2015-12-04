@@ -1,5 +1,4 @@
-#include <time.h>
-#include <cstdlib>
+#include <stdlib.h>
 #include "algorithms.h"
 
 void bubbleSort(int *vet, long n, int& comp,  int& assig){
@@ -130,11 +129,4 @@ void shellSort(int *vet, long n, int & comp, int & assig){
      }
    }
  }
-}
-
-int randomInteger(int low, int high){
-    int k;
-    srand( (unsigned)time(NULL) );
-    k = (rand() % high) + low;
-    return k;
 }

@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "algorithms.h"
 
 using namespace std;
+
 
 int main(){
 	long n;
@@ -24,6 +26,7 @@ int main(){
 
 		vet = new int [n];
 
+		
 		switch(o){
 			case 0:
 				for(i=0;i<n;i++)
@@ -34,8 +37,15 @@ int main(){
 					vet[i] = j;
 				break;
 			case 2: 
+				srand(time(NULL));
 				for(i=0;i<n;i++)
-					vet[i] = randomInteger(0, n-1);
+					vet[i] = i;
+				for(i=n-1;i>0;i--){
+					int w = rand()%i;
+					int t = vet[i];
+					vet[i] = vet[w];
+					vet[w] = t;
+				}			
 				break;
 			default:
 				printf("invalid option.");

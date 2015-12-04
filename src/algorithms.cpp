@@ -14,7 +14,7 @@ void bubbleSort(int *vet, long n, long & comp,  long & assig){
         aux = vet[j];
         vet[j] = vet[j+1];
         vet[j+1] = aux;      
-        assig+=2; 
+        assig++; 
       }
     }
   }
@@ -39,7 +39,7 @@ void selectSort(int *vet, long n, long & comp, long & assig){
          swap = vet[c];
          vet[c] = vet[position];
          vet[position] = swap;
-         assig += 2;
+         assig ++;
       }
    }
 }
@@ -67,7 +67,7 @@ void quickSort(int *arr, long left, long right, long & comp, long & assig) {
           arr[j] = tmp;
           i++;
           j--;
-          assig += 2;
+          assig ++;
         }
     }
 
@@ -94,7 +94,7 @@ void insertSort(int *vet, long n, long & comp, long & assig){
       vet[d]   = vet[d-1];
       vet[d-1] = t;
       d--;
-      assig += 2; // four assignments
+      assig ++; // four assignments
     }comp++;
   }
 }
@@ -114,7 +114,7 @@ void shellSort(int *vet, long n, long & comp, long & assig){
             tmp=vet[k];
             vet[k]=vet[k+i];
             vet[k+i]=tmp;
-            assig += 2;
+            assig ++;
         }
      }
    }

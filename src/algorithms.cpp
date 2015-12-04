@@ -14,7 +14,7 @@ void bubbleSort(int *vet, long n, long & comp,  long & assig){
         aux = vet[j];
         vet[j] = vet[j+1];
         vet[j+1] = aux;      
-        assig+=3;  // three assignments
+        assig+=2; 
       }
     }
   }
@@ -32,16 +32,14 @@ void selectSort(int *vet, long n, long & comp, long & assig){
         comp++;
          if ( vet[position] > vet[d] ){
             position = d;
-            assig++;
          }
       }
 
-      comp++;
       if ( position != c ){
          swap = vet[c];
          vet[c] = vet[position];
          vet[position] = swap;
-         assig++;
+         assig += 2;
       }
    }
 }
@@ -56,34 +54,28 @@ void quickSort(int *arr, long left, long right, long & comp, long & assig) {
 
     /* partition */
     while (i <= j) {
-    comp++;
         while (arr[i] < pivot){
             comp++;
             i++;
-            assig++;
         }comp++;
         while (arr[j] > pivot){
             comp++;
             j--;
-            assig++;
         }comp++;
-        comp++;
         if (i <= j) {
           tmp = arr[i];
           arr[i] = arr[j];
           arr[j] = tmp;
           i++;
           j--;
-          assig += 5;
+          assig += 2;
         }
     }comp++;
 
-    /* recursion */
-    comp++;
+
     if (left < j)
         quickSort(arr, left, j, comp, assig);
 
-    comp++;
     if (i < right)
         quickSort(arr, i, right, comp, assig);
 }
@@ -97,14 +89,13 @@ void insertSort(int *vet, long n, long & comp, long & assig){
 
   for (c = 1 ; c <= n - 1; c++) {
     d = c;
-    assig++;
     while ( d > 0 && vet[d] < vet[d-1]) {
       comp++;
       t          = vet[d];
       vet[d]   = vet[d-1];
       vet[d-1] = t;
       d--;
-      assig += 4; // four assignments
+      assig += 2; // four assignments
     }comp++;
   }
 }
@@ -124,7 +115,7 @@ void shellSort(int *vet, long n, long & comp, long & assig){
             tmp=vet[k];
             vet[k]=vet[k+i];
             vet[k+i]=tmp;
-            assig += 3;
+            assig += 2;
         }
      }
    }

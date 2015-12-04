@@ -63,10 +63,8 @@ int main(){
 				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 2:
-				comp = assig = 0;
-				quickSort(vet, 0, n,comp, assig);
+				quickSort(vet,n,comp);
 				printf("Number of comparisons: %ld\n", comp);
-				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 3:
 				insertSort(vet, n, comp, assig);

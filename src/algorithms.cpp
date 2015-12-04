@@ -44,39 +44,17 @@ void selectSort(int *vet, long n, long & comp, long & assig){
    }
 }
 
+long auxcomp = 0;
 
-// source http://www.algolist.net/Algorithms/Sorting/Quicksort
-void quickSort(int *arr, long left, long right, long & comp, long & assig) {
-    long i = left, j = right;
-    int tmp;
-    long pivot = arr[(left + right) / 2];
-
-    /* partition */
-    while (i <= j) {
-        while (arr[i] < pivot){
-            comp++;
-            i++;
-        }comp++;
-        while (arr[j] > pivot){
-            comp++;
-            j--;
-        }comp++;
-        if (i <= j) {
-          tmp = arr[i];
-          arr[i] = arr[j];
-          arr[j] = tmp;
-          i++;
-          j--;
-          assig ++;
-        }
-    }
+int cmpfunc (const void * a, const void * b){
+  auxcomp++;
+  return ( *(int*)a - *(int*)b );
+}
 
 
-    if (left < j)
-        quickSort(arr, left, j, comp, assig);
-
-    if (i < right)
-        quickSort(arr, i, right, comp, assig);
+void quickSort(int *vet, long n, long & comp) {
+    qsort(vet, n, sizeof(int), cmpfunc);
+    comp = auxcomp;
 }
 
 

@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "algorithms.h"
 
-void bubbleSort(int *vet, long n, int& comp,  int& assig){
+void bubbleSort(int *vet, long n, long & comp,  long & assig){
   long  i, j;
   int aux = 0 ;
 
@@ -20,7 +20,7 @@ void bubbleSort(int *vet, long n, int& comp,  int& assig){
   }
 }
 
-void selectSort(int *vet, long n, int& comp, int& assig){
+void selectSort(int *vet, long n, long & comp, long & assig){
    long c, d, position, swap;
 
    comp = assig  = 0; // initializing 
@@ -48,10 +48,10 @@ void selectSort(int *vet, long n, int& comp, int& assig){
 
 
 // source http://www.algolist.net/Algorithms/Sorting/Quicksort
-void quickSort(int *arr, long left, long right, int & comp, int & assig) {
-    int i = left, j = right;
+void quickSort(int *arr, long left, long right, long & comp, long & assig) {
+    long i = left, j = right;
     int tmp;
-    int pivot = arr[(left + right) / 2];
+    long pivot = arr[(left + right) / 2];
     assig = comp  = 0;
 
     /* partition */
@@ -91,7 +91,7 @@ void quickSort(int *arr, long left, long right, int & comp, int & assig) {
 
 
 
-void insertSort(int *vet, long n, int& comp, int& assig){
+void insertSort(int *vet, long n, long & comp, long & assig){
   long c, d, t;
   comp = assig = 0;
 
@@ -110,7 +110,7 @@ void insertSort(int *vet, long n, int& comp, int& assig){
 }
 
 
-void shellSort(int *vet, long n, int & comp, int & assig){
+void shellSort(int *vet, long n, long & comp, long & assig){
  long  i,j,k,tmp;
  comp = assig = 0;
 

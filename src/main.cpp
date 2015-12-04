@@ -9,7 +9,7 @@ using namespace std;
 int main(){
 	long n;
 	int *vet, i, j, a, o;
-	int assig, comp;
+	long assig, comp;
 
 	do {
 		printf("Enter with the number of vector elements: ");
@@ -55,28 +55,28 @@ int main(){
 		switch(a){
 			case 0:
 				bubbleSort(vet, n, comp, assig);
-				printf("Number of comparisons: %d\n", comp);		
-				printf("Number of assignments: %d\n", assig);		
+				printf("Number of comparisons: %ld\n", comp);		
+				printf("Number of assignments: %ld\n", assig);		
 				break;
 			case 1:
 				selectSort(vet, n, comp, assig);
-				printf("Number of comparisons: %d\n", comp);
-				printf("Number of assignments: %d\n", assig);
+				printf("Number of comparisons: %ld\n", comp);
+				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 2:
 				quickSort(vet, 0, n,comp, assig);
-				printf("Number of comparisons: %d\n", comp);
-				printf("Number of assignments: %d\n", assig);
+				printf("Number of comparisons: %ld\n", comp);
+				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 3:
 				insertSort(vet, n, comp, assig);
-				printf("Number of comparisons: %d\n", comp);
-				printf("Number of assignments: %d\n", assig);
+				printf("Number of comparisons: %ld\n", comp);
+				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 4:
 			 	shellSort(vet, n, comp, assig);
-				printf("Number of comparisons: %d\n",comp);
-				printf("Number of assignments: %d\n", assig);
+				printf("Number of comparisons: %ld\n",comp);
+				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 5:
 				printf("By...\n");

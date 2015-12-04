@@ -9,7 +9,7 @@ using namespace std;
 int main(){
 	long n;
 	int *vet, i, j, a, o;
-	long assig, comp;
+	long assig, comp = 0;
 
 	do {
 		printf("Enter with the number of vector elements: ");
@@ -25,7 +25,6 @@ int main(){
 
 
 		vet = new int [n];
-
 		
 		switch(o){
 			case 0:
@@ -45,7 +44,7 @@ int main(){
 					int t = vet[i];
 					vet[i] = vet[w];
 					vet[w] = t;
-				}			
+				}
 				break;
 			default:
 				printf("invalid option.");
@@ -64,6 +63,7 @@ int main(){
 				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 2:
+				comp = assig = 0;
 				quickSort(vet, 0, n,comp, assig);
 				printf("Number of comparisons: %ld\n", comp);
 				printf("Number of assignments: %ld\n", assig);

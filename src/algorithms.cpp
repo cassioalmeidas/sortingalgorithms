@@ -50,7 +50,6 @@ void quickSort(int *arr, long left, long right, long & comp, long & assig) {
     long i = left, j = right;
     int tmp;
     long pivot = arr[(left + right) / 2];
-    assig = comp  = 0;
 
     /* partition */
     while (i <= j) {
@@ -70,7 +69,7 @@ void quickSort(int *arr, long left, long right, long & comp, long & assig) {
           j--;
           assig += 2;
         }
-    }comp++;
+    }
 
 
     if (left < j)

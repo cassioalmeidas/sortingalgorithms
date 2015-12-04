@@ -9,7 +9,7 @@ using namespace std;
 int main(){
 	long n;
 	int *vet, i, j, a, o;
-	long assig, comp = 0;
+	long comp = 0;
 
 	do {
 		printf("Enter with the number of vector elements: ");
@@ -53,28 +53,24 @@ int main(){
 
 		switch(a){
 			case 0:
-				bubbleSort(vet, n, comp, assig);
+				bubbleSort(vet, n, comp);
 				printf("Number of comparisons: %ld\n", comp);		
-				printf("Number of assignments: %ld\n", assig);		
 				break;
 			case 1:
-				selectSort(vet, n, comp, assig);
+				selectSort(vet, n, comp);
 				printf("Number of comparisons: %ld\n", comp);
-				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 2:
 				quickSort(vet,n,comp);
 				printf("Number of comparisons: %ld\n", comp);
 				break;
 			case 3:
-				insertSort(vet, n, comp, assig);
+				insertSort(vet, n, comp);
 				printf("Number of comparisons: %ld\n", comp);
-				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 4:
-			 	shellSort(vet, n, comp, assig);
+			 	shellSort(vet, n, comp);
 				printf("Number of comparisons: %ld\n",comp);
-				printf("Number of assignments: %ld\n", assig);
 				break;
 			case 5:
 				printf("By...\n");

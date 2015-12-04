@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include "algorithms.h"
 
-void bubbleSort(int *vet, long n, long & comp,  long & assig){
+void bubbleSort(int *vet, long n, long & comp){
   long  i, j;
   int aux = 0 ;
 
-  comp = assig = 0; // initializing
+  comp = 0; // initializing
 
   for(i=0; i < n-1; i++) {          
     for(j=0; j < n - i - 1; j++) {
@@ -14,16 +14,15 @@ void bubbleSort(int *vet, long n, long & comp,  long & assig){
         aux = vet[j];
         vet[j] = vet[j+1];
         vet[j+1] = aux;      
-        assig++; 
       }
     }
   }
 }
 
-void selectSort(int *vet, long n, long & comp, long & assig){
+void selectSort(int *vet, long n, long & comp){
    long c, d, position, swap;
 
-   comp = assig  = 0; // initializing 
+   comp = 0; // initializing 
   
    for ( c = 0 ; c < ( n - 1 ) ; c++ ){
       position = c;
@@ -39,7 +38,6 @@ void selectSort(int *vet, long n, long & comp, long & assig){
          swap = vet[c];
          vet[c] = vet[position];
          vet[position] = swap;
-         assig ++;
       }
    }
 }
@@ -60,9 +58,9 @@ void quickSort(int *vet, long n, long & comp) {
 
 
 
-void insertSort(int *vet, long n, long & comp, long & assig){
+void insertSort(int *vet, long n, long & comp){
   long c, d, t;
-  comp = assig = 0;
+  comp = 0;
 
   for (c = 1 ; c <= n - 1; c++) {
     d = c;
@@ -72,15 +70,14 @@ void insertSort(int *vet, long n, long & comp, long & assig){
       vet[d]   = vet[d-1];
       vet[d-1] = t;
       d--;
-      assig ++; // four assignments
     }comp++;
   }
 }
 
 
-void shellSort(int *vet, long n, long & comp, long & assig){
+void shellSort(int *vet, long n, long & comp){
  long  i,j,k,tmp;
- comp = assig = 0;
+ comp = 0;
 
   for(i=n/2; i>0; i=i/2){
    for(j=i; j<n; j++){
@@ -92,7 +89,6 @@ void shellSort(int *vet, long n, long & comp, long & assig){
             tmp=vet[k];
             vet[k]=vet[k+i];
             vet[k+i]=tmp;
-            assig ++;
         }
      }
    }

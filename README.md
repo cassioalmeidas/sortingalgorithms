@@ -3,17 +3,23 @@
 ```
 git clone https://github.com/cassioalmeidas/sortingalgorithms
 
+cd sortingalgorithms
+
 make
 
 ```
 
 ## Runing
 
+```
+
 ./bin/runner
 
+```
 
 
-### sorting algorithms:
+
+## Sorting Algorithms:
 
 
 * [BubbleSort](https://en.wikipedia.org/wiki/Bubble_sort)
@@ -21,3 +27,9 @@ make
 * [ShellSort](https://en.wikipedia.org/wiki/Shell_sort)
 * [SelectSort](https://en.wikipedia.org/wiki/Selection_sort)
 * [QuickSort](https://en.wikipedia.org/wiki/Quicksort)
+
+
+## Authors
+
+- Cassio Almeida (jcassiocosta@gmail.com)
+- Francisco da Paz (dapaz18@hotmail.com)

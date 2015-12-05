@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 int main(){
 	long n;
 	int *vet, i, j, a, o;
@@ -61,6 +60,7 @@ int main(){
 				printf("Number of comparisons: %ld\n", comp);
 				break;
 			case 2:
+				comp = 0;
 				quickSort(vet,n,comp);
 				printf("Number of comparisons: %ld\n", comp);
 				break;

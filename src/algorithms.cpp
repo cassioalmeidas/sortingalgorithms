@@ -51,6 +51,7 @@ int cmpfunc (const void * a, const void * b){
 
 
 void quickSort(int *vet, long n, long & comp) {
+    auxcomp = 0;
     qsort(vet, n, sizeof(int), cmpfunc);
     comp = auxcomp;
 }
